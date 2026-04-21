@@ -1,6 +1,6 @@
 ---
 title: "On Quantifying Human Emotion"
-date: 2026-04-01
+date: 2026-04-21
 category: research
 tags: [human-robot-interaction, emotion, modeling, machine-learning]
 excerpt: "How can we translate emotions into the language of computers?"
