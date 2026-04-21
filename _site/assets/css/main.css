@@ -155,7 +155,7 @@ time {
   color: var(--color-sage);
 }
 
-.site-nav__brand-accent {
+.site-nav__brand .site-nav__brand-accent {
   color: var(--color-blossom);
 }
 
