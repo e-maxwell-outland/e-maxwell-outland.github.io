@@ -82,6 +82,9 @@ Applied SHAP, LIME, and Layer-wise Relevance Propagation to a novel IF-CBLOF (Is
 **ARIA Systems Lab** — University of Colorado Boulder  
 Graduate researcher studying explainable multi-agent motion planning and human mental state modeling.
 
+**Arquilla Group** — University of Colorado Boulder  
+Co-advised by Prof. Katya Arquilla. The Arquilla Group takes a human-centered approach to human-automation interactions and behavioral health in operational environments, using psychophysiological monitoring and wearable sensing — directly informing the spaceflight motivation behind my thesis work.
+
 **Air Force Research Lab — Space Vehicles Directorate**  
 SMART Scholar (2023–present), with three summers of research in explainable ML, control system optimization, and LLM-assisted satellite operations.
 
