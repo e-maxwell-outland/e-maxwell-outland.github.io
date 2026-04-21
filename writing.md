@@ -4,13 +4,13 @@ title: Writing
 description: Research notes and personal essays by Emily Maxwell Outland.
 ---
 
-I write to think through ideas before they're finished, and to make research accessible outside the lab. Here you'll find notes from ongoing work alongside more personal reflections — the kind of thinking that doesn't fit neatly into a paper.
+I write to think through ideas before they're finished, and to make research accessible outside the lab. Here you'll find notes from ongoing work alongside more personal reflections — the kind of thinking that doesn't fit neatly into a paper. 📝
 
 ---
 
 ## Research Notes
 
-Occasional notes on ongoing work, interesting papers, and thinking-in-progress.
+Occasional notes on ongoing work and thinking-in-progress.
 
 <div class="post-list">
 {% assign research_posts = site.posts | where: "category", "research" | limit: 2 %}
@@ -36,7 +36,7 @@ Occasional notes on ongoing work, interesting papers, and thinking-in-progress.
 
 ## Personal Essays
 
-Reflections on research life, jiu jitsu, tea, and the occasional crisis of confidence.
+Reflections on the lessons life teaches and things going on in the world from the perspective of yours truly. 🌸
 
 <div class="post-list">
 {% assign personal_posts = site.posts | where: "category", "personal" | limit: 2 %}
