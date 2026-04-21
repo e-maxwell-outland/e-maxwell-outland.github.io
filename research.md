@@ -80,7 +80,7 @@ Applied SHAP, LIME, and Layer-wise Relevance Propagation to a novel IF-CBLOF (Is
 ## Lab Affiliations
 
 **ARIA Systems Lab** — University of Colorado Boulder  
-Graduate researcher studying explainable multi-agent motion planning and human mental state modeling.
+Led by Prof. Morteza Lahijanian, the ARIA Systems Group develops theoretical foundations and computational frameworks for autonomous systems that operate safely alongside humans. The lab integrates formal methods, motion planning under uncertainty, and multi-agent coordination to build correct-by-construction autonomous systems — the backbone of my work on explainable planning and legible robot behavior.
 
 **Arquilla Group** — University of Colorado Boulder  
 Co-advised by Prof. Katya Arquilla. The Arquilla Group takes a human-centered approach to human-automation interactions and behavioral health in operational environments, using psychophysiological monitoring and wearable sensing — directly informing the spaceflight motivation behind my thesis work.
