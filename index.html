@@ -75,11 +75,11 @@ title: Home
     {% endif %}
   </div>
 
-  <!-- Card 3: Fun Fact (JS rotated hourly) -->
-  <div class="card">
+  <!-- Card 3: Fun Fact (JS rotated hourly, click for next) -->
+  <div class="card card--clickable" id="fun-fact-card" title="Click for another">
     <span class="eyebrow">Fun Fact</span>
     <p class="card__fact" id="fun-fact-text">Loading&hellip;</p>
-    <span class="tag tag--mist">about me</span>
+    <span class="tag tag--mist">click for another</span>
   </div>
 
 </section>
@@ -138,8 +138,17 @@ title: Home
   var factIndex  = hour % facts.length;
   var verseIndex = hour % verses.length;
 
+  var factOffset = 0;
   var factEl = document.getElementById('fun-fact-text');
   if (factEl) factEl.textContent = facts[factIndex];
+
+  var factCard = document.getElementById('fun-fact-card');
+  if (factCard) {
+    factCard.addEventListener('click', function() {
+      factOffset = (factOffset + 1) % facts.length;
+      factEl.textContent = facts[(factIndex + factOffset) % facts.length];
+    });
+  }
 
   var verseTextEl = document.getElementById('bible-verse-text');
   var verseRefEl  = document.getElementById('bible-verse-ref');

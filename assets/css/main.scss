@@ -387,6 +387,14 @@ time {
   line-height: 1.7;
   font-style: italic;
 }
+.card--clickable {
+  cursor: pointer;
+  transition: box-shadow 0.2s ease, transform 0.15s ease;
+}
+.card--clickable:hover {
+  box-shadow: 0 4px 16px rgba(58,53,48,0.08);
+  transform: translateY(-2px);
+}
 
 /* Post list cards (writing pages) */
 .post-list {
