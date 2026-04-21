@@ -69,7 +69,7 @@ Right now, I'm particularly interested in two directions. The first is explainab
 
 ## Publications
 
-**Maxwell, E.\*, Kricheff, S.\*, Plaks, C.\*, & Simon, M.** (2024). An Explainable Machine Learning Approach for Anomaly Detection in Satellite Telemetry Data. *IEEE Aerospace Conference Proceedings 2024*. Published May 13, 2024; Presented March 7, 2024.
+**Maxwell, E.**\*, Kricheff, S.\*, Plaks, C.\*, & Simon, M. (2024). An Explainable Machine Learning Approach for Anomaly Detection in Satellite Telemetry Data. *IEEE Aerospace Conference Proceedings 2024*. Published May 13, 2024; Presented March 7, 2024.
 
 Applied SHAP, LIME, and Layer-wise Relevance Propagation to a novel IF-CBLOF (Isolation Forest Clustering-Based Local Outlier Factor) model and LSTM Neural Network to detect, score, and explain anomalies in satellite telemetry data.
 
@@ -80,10 +80,10 @@ Applied SHAP, LIME, and Layer-wise Relevance Propagation to a novel IF-CBLOF (Is
 ## Lab Affiliations
 
 **ARIA Systems Lab** — University of Colorado Boulder  
-Led by Prof. Morteza Lahijanian, the ARIA Systems Group develops theoretical foundations and computational frameworks for autonomous systems that operate safely alongside humans. The lab integrates formal methods, motion planning under uncertainty, and multi-agent coordination to build correct-by-construction autonomous systems — the backbone of my work on explainable planning and legible robot behavior.
+Led by Prof. Morteza Lahijanian, the ARIA Systems Group develops theoretical foundations and computational frameworks for autonomous systems that operate safely alongside humans. The lab integrates formal methods, motion planning under uncertainty, and multi-agent coordination to build correct-by-construction autonomous systems.
 
 **Arquilla Group** — University of Colorado Boulder  
-Co-advised by Prof. Katya Arquilla. The Arquilla Group takes a human-centered approach to human-automation interactions and behavioral health in operational environments, using psychophysiological monitoring and wearable sensing — directly informing the spaceflight motivation behind my thesis work.
+Led by Prof. Katya Arquilla, the Arquilla Group takes a human-centered approach to human-automation interactions and behavioral health in operational environments, using psychophysiological monitoring and wearable sensing.
 
 **Air Force Research Lab — Space Vehicles Directorate**  
 SMART Scholar (2023–present), with three summers of research in explainable ML, control system optimization, and LLM-assisted satellite operations.
