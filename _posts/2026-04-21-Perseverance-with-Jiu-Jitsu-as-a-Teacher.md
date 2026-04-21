@@ -17,3 +17,5 @@ I find research to be much the same.
 You start out wide-eyed in a brand new world with no map, and you don't even know how to read a paper, much less present your own. You go home after your first day on a new project, lay on the ground, and stare into the void while you think, *What have I gotten myself into?* In that moment, we must embrace humility and remember that every great discovery was once an unknown variable.
 
 Each day, I'm competing against me of yesterday. Slowly, I learn the acronyms of this algorithm and that framework, so then I can at least nod and smile but mean it. Next, I learn to read and find my own papers, so I can learn to hold myself up and think on my own. One day, I have a halfway original thought, just to be critiqued to the ends of the earth by my advisor for my prize. Even in areas where I do have expertise, there is always more to learn, and like Socrates found: *the wisest of us is the one who knows they know truly nothing at all*.
+
+<small>Proverbs 11:2 — "When pride comes, then comes disgrace, but with the humble is wisdom."</small>
