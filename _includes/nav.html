@@ -1,0 +1,25 @@
+<nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a class="site-nav__brand" href="{{ '/' | relative_url }}">Emily Maxwell Outland</a>
+  <ul class="site-nav__links">
+    <li>
+      <a href="{{ '/' | relative_url }}"
+        {% if page.url == "/" %}aria-current="page"{% endif %}>Home</a>
+    </li>
+    <li>
+      <a href="{{ '/research/' | relative_url }}"
+        {% if page.url contains '/research' %}aria-current="page"{% endif %}>Research</a>
+    </li>
+    <li>
+      <a href="{{ '/writing/' | relative_url }}"
+        {% if page.url contains '/writing' %}aria-current="page"{% endif %}>Writing</a>
+    </li>
+    <li>
+      <a href="{{ '/cv/' | relative_url }}"
+        {% if page.url contains '/cv' %}aria-current="page"{% endif %}>CV</a>
+    </li>
+    <li>
+      <a href="{{ '/contact/' | relative_url }}"
+        {% if page.url contains '/contact' %}aria-current="page"{% endif %}>Contact</a>
+    </li>
+  </ul>
+</nav>

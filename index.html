@@ -1,0 +1,157 @@
+---
+layout: default
+title: Home
+---
+
+<!-- ====================================================
+     Hero
+     ==================================================== -->
+<section class="hero">
+  <div class="hero__text">
+    <span class="eyebrow">Graduate Researcher &middot; CU Boulder</span>
+    <h1 class="hero__name">
+      <span class="name--ink">Emily</span><br>
+      <em class="name--blossom">Maxwell Outland</em>
+    </h1>
+    <p class="hero__tagline">
+      Human factors, space systems, and
+      <em class="tagline--blossom">the machines in between.</em>
+    </p>
+    <p class="hero__bio">
+      I'm a graduate researcher at CU Boulder studying how humans and autonomous
+      systems work better together. My research spans explainable AI for robot motion
+      planning, physiological state modeling for spaceflight, and the trust dynamics
+      that shape human-machine teams. When I'm not in the lab, I'm probably brewing
+      tea, getting submitted at jiu-jitsu practice, or quietly evangelizing Obsidian.
+    </p>
+    <div class="hero__buttons">
+      <a href="{{ '/research/' | relative_url }}" class="btn btn--filled">View Research</a>
+      <a href="{{ '/writing/' | relative_url }}" class="btn btn--ghost">Read Writing</a>
+    </div>
+  </div>
+
+  <div class="hero__photo">
+    <!--
+      Photo collage — replace the colored placeholder divs below with your photos.
+      Example:
+        <img src="/assets/images/photo-main.jpg"  alt="Emily outdoors" class="photo-collage__main">
+        <img src="/assets/images/photo-left.jpg"  alt="..." class="photo-collage__small">
+        <img src="/assets/images/photo-right.jpg" alt="..." class="photo-collage__small">
+    -->
+    <div class="photo-collage">
+      <div class="photo-collage__main"  style="background-color:#e8f0eb;"></div>
+      <div class="photo-collage__small" style="background-color:#ece8f5;"></div>
+      <div class="photo-collage__small" style="background-color:#e3ecf0;"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================
+     Dashboard Cards
+     ==================================================== -->
+<section class="card-grid">
+
+  <!-- Card 1: Latest Research Post -->
+  <div class="card">
+    <span class="eyebrow">Latest Research</span>
+    {% assign research_posts = site.posts | where: "category", "research" %}
+    {% if research_posts.size > 0 %}
+      {% assign latest_research = research_posts | first %}
+      <h3><a href="{{ latest_research.url | relative_url }}">{{ latest_research.title }}</a></h3>
+      <p class="card__excerpt">{{ latest_research.excerpt | strip_html | truncate: 130 }}</p>
+      <span class="tag tag--sage">research</span>
+    {% else %}
+      <p class="card__excerpt">Research notes coming soon.</p>
+    {% endif %}
+  </div>
+
+  <!-- Card 2: Latest Personal Post -->
+  <div class="card">
+    <span class="eyebrow">Latest Writing</span>
+    {% assign personal_posts = site.posts | where: "category", "personal" %}
+    {% if personal_posts.size > 0 %}
+      {% assign latest_personal = personal_posts | first %}
+      <h3><a href="{{ latest_personal.url | relative_url }}">{{ latest_personal.title }}</a></h3>
+      <time>{{ latest_personal.date | date: "%B %-d, %Y" }}</time>
+      <p class="card__excerpt">{{ latest_personal.excerpt | strip_html | truncate: 130 }}</p>
+      <span class="tag tag--blossom">personal</span>
+    {% else %}
+      <p class="card__excerpt">Personal essays coming soon.</p>
+    {% endif %}
+  </div>
+
+  <!-- Card 3: Fun Fact (JS rotated hourly) -->
+  <div class="card">
+    <span class="eyebrow">Fun Fact</span>
+    <p class="card__fact" id="fun-fact-text">Loading&hellip;</p>
+    <span class="tag tag--mist">about me</span>
+  </div>
+
+</section>
+
+<!-- ====================================================
+     Bible Verse (hourly rotation)
+     ==================================================== -->
+<section class="verse-section">
+  <p id="bible-verse-text"></p>
+  <p id="bible-verse-ref"></p>
+</section>
+
+<!-- ====================================================
+     JS: Fun Facts + Bible Verses
+     ==================================================== -->
+<script>
+(function () {
+  var facts = [
+    "I do Brazilian Jiu Jitsu, so I learn to break joints and cut off oxygen for fun.",
+    "I have two grey cats named Earl and Matcha, both named after my favorite teas.",
+    "I love plants deeply, but somehow kill them anyway.",
+    "I talked a music professor into giving me piano lessons and accidentally ended up with a music minor.",
+    "I listen to Japanese rock, lofi, and instrumental jazz almost exclusively. Think cozy, slightly moody internet cafe.",
+    "I love trying new tea and coffee blends, and I have an at-home setup to rival a cafe.",
+    "I love to read, and my current favorite authors are Japanese: Asako Yuzuki, Satoshi Yagisawa, and Toshikazu Kawaguchi. (In addition to Brandon Sanderson and C.S. Lewis, of course...)",
+    "I own more fidget toys than I will ever admit to professionally.",
+    "My research involves making robots explain themselves. Progress is ongoing.",
+    "I keep all my notes and most of my work in Obsidian, and I\u2019m straight-up evangelical about it."
+  ];
+
+  var verses = [
+    { text: "The heart of the discerning acquires knowledge, for the ears of the wise seek it out.", ref: "Proverbs 18:15 (NIV)" },
+    { text: "The beginning of wisdom is this: Get wisdom, and whatever you get, get insight.", ref: "Proverbs 4:7 (ESV)" },
+    { text: "When I look at your heavens, the work of your fingers, the moon and the stars, which you have set in place, what is man that you are mindful of him?", ref: "Psalm 8:3\u20134 (ESV)" },
+    { text: "He determines the number of the stars; he gives to all of them their names.", ref: "Psalm 147:4 (ESV)" },
+    { text: "Whatever you do, work heartily, as for the Lord and not for men.", ref: "Colossians 3:23 (ESV)" },
+    { text: "She perceives that her merchandise is profitable. Her lamp does not go out at night.", ref: "Proverbs 31:18 (ESV)" },
+    { text: "And let us not grow weary of doing good, for in due season we will reap, if we do not give up.", ref: "Galatians 6:9 (ESV)" },
+    { text: "Not only that, but we rejoice in our sufferings, knowing that suffering produces endurance, and endurance produces character, and character produces hope.", ref: "Romans 5:3\u20134 (ESV)" },
+    { text: "Strength and dignity are her clothing, and she laughs at the time to come.", ref: "Proverbs 31:25 (ESV)" },
+    { text: "The Lord your God is in your midst, a mighty one who will save; he will rejoice over you with gladness; he will quiet you by his love.", ref: "Zephaniah 3:17 (ESV)" },
+    { text: "But they who wait for the Lord shall renew their strength; they shall mount up with wings like eagles.", ref: "Isaiah 40:31 (ESV)" },
+    { text: "And he said to me, \u2018My grace is sufficient for you, for my power is made perfect in weakness.\u2019", ref: "2 Corinthians 12:9 (ESV)" },
+    { text: "Can you bind the chains of the Pleiades or loose the cords of Orion? Can you lead forth the Mazzaroth in their season, or can you guide the Bear with its children? Do you know the ordinances of the heavens? Can you establish their rule on the earth?", ref: "Job 38:31\u201333 (ESV)" },
+    { text: "When the morning stars sang together and all the sons of God shouted for joy.", ref: "Job 38:7 (ESV)" },
+    { text: "It is the glory of God to conceal things, but the glory of kings is to search things out.", ref: "Proverbs 25:2 (ESV)" },
+    { text: "Does not wisdom call? Does not understanding raise her voice?", ref: "Proverbs 8:1 (ESV)" },
+    { text: "For the Lord gives wisdom; from his mouth come knowledge and understanding.", ref: "Proverbs 2:6 (ESV)" },
+    { text: "For from him and through him and to him are all things. To him be glory forever.", ref: "Romans 11:36 (ESV)" },
+    { text: "Come to me, all who labor and are heavy laden, and I will give you rest.", ref: "Matthew 11:28 (ESV)" },
+    { text: "My help comes from the Lord, who made heaven and earth.", ref: "Psalm 121:2 (ESV)" },
+    { text: "Consider the lilies of the field, how they grow: they neither toil nor spin, yet I tell you, even Solomon in all his glory was not arrayed like one of these.", ref: "Matthew 6:28\u201329 (ESV)" }
+  ];
+
+  var hour = Math.floor(Date.now() / 3600000);
+  var factIndex  = hour % facts.length;
+  var verseIndex = hour % verses.length;
+
+  var factEl = document.getElementById('fun-fact-text');
+  if (factEl) factEl.textContent = facts[factIndex];
+
+  var verseTextEl = document.getElementById('bible-verse-text');
+  var verseRefEl  = document.getElementById('bible-verse-ref');
+  if (verseTextEl && verseRefEl) {
+    var v = verses[verseIndex];
+    verseTextEl.textContent = '\u201C' + v.text + '\u201D';
+    verseRefEl.textContent  = '\u2014 ' + v.ref;
+  }
+})();
+</script>
