@@ -33,3 +33,5 @@ description: Get in touch with Emily Maxwell Outland.
   </a>
 
 </div>
+
+<a href="/assets/EMOutland_CV-1.pdf" class="btn btn--ghost" download style="margin-top:1.5rem; display:inline-block;">Download CV (PDF)</a>

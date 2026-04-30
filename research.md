@@ -4,6 +4,8 @@ title: Research
 description: Emily Maxwell Outland's research in explainable AI, human-machine teaming, and bioastronautics.
 ---
 
+<a href="/assets/EMOutland_CV-1.pdf" class="btn btn--ghost" download>Download CV (PDF)</a>
+
 I am driven by a simple conviction: that humans and autonomous systems are better together than either is alone. My work sits at the intersection of human factors and autonomy — asking how we design machines that genuinely serve the humans working alongside them, rather than the other way around. The thread running through my projects is the question of *transparency*: what does it mean for a system to be truly understandable to the person depending on it?
 
 Right now, I'm particularly interested in two directions. The first is explainable planning — how can autonomous and multi-agent systems convey their reasoning to non-expert users in ways that actually build appropriate trust and comprehension, not just the appearance of it? The second is physiological state modeling in operational contexts: can we use passive wearable sensing to track where someone's emotional state is *heading*, so that systems can adapt proactively rather than reactively? Spaceflight is my motivating application — isolated, resource-constrained, high-stakes environments where human-machine teaming genuinely matters.
@@ -60,6 +62,49 @@ Right now, I'm particularly interested in two directions. The first is explainab
     <p>
       Exploring the use of large language models to assist satellite operators in task
       identification and execution at the Air Force Research Lab Space Vehicles Directorate.
+    </p>
+  </div>
+
+</div>
+
+---
+
+## Highlighted Past Projects
+
+<div class="project-grid">
+
+  <div class="project-card">
+    <div class="project-meta">Human Factors &middot; August – December 2025</div>
+    <h3>The Mad HATter</h3>
+    <span class="tag tag--mist" style="margin-bottom:0.75rem;">Completed</span>
+    <p>
+      Explored the effects of autonomous agent personality on human-agent team dynamics.
+      Designed a within-subjects study manipulating AI apology tone and error rate to measure
+      effects on trust, workload, and agent perception.
+    </p>
+    <p>
+      Found apology quality significantly predicted trust (F(2,39)&nbsp;=&nbsp;8.38,
+      p&nbsp;&lt;&nbsp;.001); rude apologies produced lower trust than no apology at all.
+      Identified <em>apology fatigue</em>: higher apology frequency decreased trust independent
+      of tone (&asymp;&nbsp;&minus;0.49&nbsp;units/SD) — with implications for agent personality
+      design in human-machine teaming.
+    </p>
+  </div>
+
+  <div class="project-card">
+    <div class="project-meta">Explainable AI &middot; August – December 2025</div>
+    <h3>Explainable Sampling-Based Motion Planning</h3>
+    <span class="tag tag--mist" style="margin-bottom:0.75rem;">Completed</span>
+    <p>
+      Compared saliency and text-based explanations for RRT path understanding. Implemented
+      a modified RRT with inverse-density sampling and developed a dual-modality explanation
+      system: saliency heatmaps and interactive contrastive text explanations via k-medoids
+      clustering.
+    </p>
+    <p>
+      Evaluated via a counterbalanced within-subjects protocol (N&nbsp;=&nbsp;24, Latin square)
+      across three workspace types. Identified Hausdorff distance limitations in topologically
+      complex environments — informing the design of the follow-on multi-agent study.
     </p>
   </div>
 
