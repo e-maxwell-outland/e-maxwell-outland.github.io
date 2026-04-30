@@ -1,0 +1,39 @@
+---
+layout: default
+---
+<div class="container page-content">
+  <h1 class="page-title">{{ page.title }}</h1>
+  <p class="margins-intro">What's living in the margins of my days, right now.</p>
+  {% if page.updated %}<p class="margins-updated">Last updated {{ page.updated }}</p>{% endif %}
+
+  <div class="margins-list">
+
+    <div class="margins-item">
+      <span class="margins-item__label">📖 Reading</span>
+      <p class="margins-item__value">{{ page.reading }}</p>
+    </div>
+
+    <div class="margins-item">
+      <span class="margins-item__label">🍵 Steeping</span>
+      <p class="margins-item__value">{{ page.steeping }}</p>
+    </div>
+
+    <div class="margins-item">
+      <span class="margins-item__label">🎮 Playing</span>
+      <p class="margins-item__value">{{ page.playing }}</p>
+    </div>
+
+    <div class="margins-item">
+      <span class="margins-item__label">🌿 Thinking about</span>
+      <p class="margins-item__value">{{ page.thinking }}</p>
+    </div>
+
+    <div class="margins-item">
+      <span class="margins-item__label">✝️ Meditating</span>
+      <p class="margins-item__value">{{ page.meditating }}</p>
+    </div>
+
+  </div>
+
+  {{ content }}
+</div>
