@@ -1,12 +1,12 @@
 ---
 layout: margins
 title: In the Margins
-description: What Emily Maxwell Outland is reading, steeping, playing, and thinking about right now.
-updated: "April 2026"
+description: What fills in the edges of my time when I'm not adulting or working on research.
+updated: "May 2026"
 
-reading: "Dinner at the Night Library, by Hika Harada"
-steeping: "Chinese black tea with lavender and vanilla"
+reading: "Hooked, by Asako Yuzuki"
+steeping: "Birthday Cake Rooibos Blend"
 playing: "Tomodachi Life"
-thinking: "What does it mean to be human in a world filled with AI? There's clearly something, so how do we articulate it and preserve it?"
+thinking: "How do I find meaning in my life during the daily grind? In between the major accomplishments, breakthroughs, and joys, where does that daily happiness to keep on moving live?"
 meditating: "James 1 – the meaning of endurance"
 ---
