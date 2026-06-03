@@ -23,6 +23,21 @@
 }
 
 /* ============================================================
+   Dark Mode
+   ============================================================ */
+[data-theme=dark] {
+  --color-parchment: #1A2320;
+  --color-white: #212E29;
+  --color-sage: #8FBA9A;
+  --color-sage-dark: #7aaa88;
+  --color-blossom: #D8AFC2;
+  --color-mist: #A8BCCA;
+  --color-ink: #EAE2D6;
+  --color-warm-gray: #A09890;
+  --color-border: #2E3F3A;
+}
+
+/* ============================================================
    Base Reset + Typography
    ============================================================ */
 *, *::before, *::after {
@@ -192,6 +207,36 @@ time {
 .site-nav__links a[aria-current=page] {
   color: var(--color-sage);
   border-bottom-color: var(--color-sage);
+}
+
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-warm-gray);
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.15s ease;
+  margin-left: 1rem;
+}
+
+.theme-toggle:hover {
+  color: var(--color-ink);
+}
+
+.theme-toggle__icon {
+  display: none;
+}
+
+/* show sun in dark mode, moon in light mode */
+:root:not([data-theme=dark]) .theme-toggle__icon--moon {
+  display: block;
+}
+
+[data-theme=dark] .theme-toggle__icon--sun {
+  display: block;
 }
 
 /* ============================================================
