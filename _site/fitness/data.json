@@ -1,0 +1,25 @@
+{
+  "goals": {
+    "protein": 100,
+    "carbs": 140,
+    "fat": 45,
+    "sugar": 50
+  },
+  "days": {
+    "2026-06-22": {
+      "weight": null,
+      "foods": [
+        {
+          "id": "mqpnyhr40jf",
+          "name": "Greek yogurt",
+          "meal": "breakfast",
+          "protein": 15,
+          "carbs": 12,
+          "fat": 2,
+          "sugar": 8
+        }
+      ],
+      "exercises": []
+    }
+  }
+}
