@@ -9,7 +9,13 @@
     "2026-06-22": {
       "weight": null,
       "foods": [],
-      "exercises": []
+      "exercises": [
+        {
+          "id": "mqqt3itm5s8",
+          "type": "Yoga",
+          "duration": 55
+        }
+      ]
     },
     "2026-06-23": {
       "weight": null,
