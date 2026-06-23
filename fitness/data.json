@@ -10,6 +10,21 @@
       "weight": null,
       "foods": [],
       "exercises": []
+    },
+    "2026-06-23": {
+      "weight": null,
+      "foods": [
+        {
+          "id": "mqqt23nvd8w",
+          "name": "Premier Protein Orange Cream",
+          "meal": "breakfast",
+          "protein": 30,
+          "carbs": 2,
+          "fat": 3,
+          "sugar": 0
+        }
+      ],
+      "exercises": []
     }
   }
 }
