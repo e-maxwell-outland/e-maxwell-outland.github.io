@@ -1,9 +1,9 @@
 {
   "goals": {
-    "protein": 100,
-    "carbs": 140,
+    "protein": 95,
+    "carbs": 180,
     "fat": 45,
-    "sugar": 50
+    "sugar": 36
   },
   "days": {
     "2026-06-22": {
