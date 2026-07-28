@@ -4,11 +4,11 @@ title: Research
 description: Emily Maxwell Outland's research in explainable AI, human-machine teaming, and bioastronautics.
 ---
 
-<a href="/assets/EMOutland_CV-1.pdf" class="btn btn--ghost" download>Download CV (PDF)</a>
+<a href="/assets/EMOutland_CV-2.pdf" class="btn btn--ghost" download>Download CV (PDF)</a>
 
 I am driven by a simple conviction: that humans and autonomous systems are better together than either is alone. My work sits at the intersection of human factors and autonomy — asking how we design machines that genuinely serve the humans working alongside them, rather than the other way around. The thread running through my projects is the question of *transparency*: what does it mean for a system to be truly understandable to the person depending on it?
 
-Right now, I'm particularly interested in two directions. The first is explainable planning — how can autonomous and multi-agent systems convey their reasoning to non-expert users in ways that actually build appropriate trust and comprehension, not just the appearance of it? The second is physiological state modeling in operational contexts: can we use passive wearable sensing to track where someone's emotional state is *heading*, so that systems can adapt proactively rather than reactively? Spaceflight is my motivating application — isolated, resource-constrained, high-stakes environments where human-machine teaming genuinely matters.
+Right now, I'm particularly interested in two directions. The first is explainable planning. How can autonomous and multi-agent systems convey their reasoning to non-expert users in ways that actually build appropriate trust and comprehension, not just the appearance of it? The second is related: techability for Reinforcement Learning (RL) agents. In a real operational context, where models often do not match reality, how can we explain an agent's reasoning to a human? When it is inevitably wrong in its reasoning, how can we easily correct it in the easiest modality for human comprehension: natural language?
 
 ---
 
@@ -16,9 +16,8 @@ Right now, I'm particularly interested in two directions. The first is explainab
 
 - Explainable AI for autonomous and multi-agent systems
 - Human-machine teaming, trust calibration, and appropriate reliance
-- Sampling-based motion planning and path legibility
-- Physiological and affective state modeling
-- Human factors in spaceflight and isolated, confined, extreme (ICE) environments
+- Human physiological signals and adaptive autonomy
+- Teachable AI for resilient and trustworthy autonomy
 
 ---
 
@@ -27,19 +26,19 @@ Right now, I'm particularly interested in two directions. The first is explainab
 <div class="project-grid">
 
   <div class="project-card">
-    <div class="project-meta">Master's Thesis &middot; March 2026 – Present</div>
-    <h3>Longitudinal Affective State Trajectory Modeling</h3>
-    <span class="tag tag--blossom" style="margin-bottom:0.75rem;">Thesis</span>
+    <div class="project-meta">Master's Thesis &middot; July 2026 – Present</div>
+    <h3>Evaluating Comprehension for Multi-Agent Explainable Path Planning</h3>
+    <span class="tag tag--sage" style="margin-bottom:0.75rem;">In Progress</span>
     <p>
-      Models human affective state as a continuous latent trajectory — valence and arousal
-      over time — estimated from multimodal wearable and self-report data. Uses the
-      GRU-ODE-Bayes framework applied to the LifeSnaps dataset (n&nbsp;=&nbsp;71, 4 months,
-      Fitbit Sense). The latent space is grounded in the Russell circumplex via a fixed
-      psychometric rotation, addressing a construct validity gap in existing HRI models.
+      Exploring teachable Reinforcement Learning (RL) which explains its reasoning to a human
+      in natural language and receives critique to that reasoning from a human in natural language.
+      Similar to teachability in humans, the goal is to create an agent which can learn from human feedback.
     </p>
     <p>
-      Motivating application: real-time emotional state awareness for adaptive autonomy in
-      long-duration spaceflight, where isolation and circadian disruption compound over months.
+      Motivating application: In operational environments, novel situations are the norm, not the exception.
+      RL typically needs a lot of data to train, but these novel scenarios can be rare or catastrophic. What if
+      a human could update the agent's understanding of cause and effect through a conversation instead? Perhaps
+      one sentence could be worth a thousand simulated scenarios.
     </p>
   </div>
 
@@ -58,7 +57,7 @@ Right now, I'm particularly interested in two directions. The first is explainab
   <div class="project-card">
     <div class="project-meta">AFRL SMART Scholar &middot; Summer 2025</div>
     <h3>LLMs for Satellite Operator Assistance</h3>
-    <span class="tag tag--mist" style="margin-bottom:0.75rem;">In Progress</span>
+    <span class="tag tag--sage" style="margin-bottom:0.75rem;">In Progress</span>
     <p>
       Exploring the use of large language models to assist satellite operators in task
       identification and execution at the Air Force Research Lab Space Vehicles Directorate.
@@ -73,6 +72,21 @@ Right now, I'm particularly interested in two directions. The first is explainab
 
 <div class="project-grid">
 
+<div class="project-card">
+    <div class="project-meta">Master's Thesis &middot; March 2026 – June 2026</div>
+    <h3>Longitudinal Affective State Trajectory Modeling</h3>
+    <span class="tag tag--blossom" style="margin-bottom:0.75rem;">On Hold</span>
+    <p>
+      Explored modeling human affective (emotional) state as a continuous latent trajectory 
+      estimated from multimodal wearable data, with a latent space grounded in the 
+      Russell circumplex.
+    <p>
+      Set aside this research direction because valence is currently impossible to measure through 
+      unobtrusive wearables without self-report data. Real-time brain activity, facial muscle 
+      activation, or eye-tracking would be needed to get a valence measurement with any fidelity.
+    </p>
+  </div>
+
   <div class="project-card">
     <div class="project-meta">Human Factors &middot; August – December 2025</div>
     <h3>The Mad HATter</h3>
@@ -86,8 +100,8 @@ Right now, I'm particularly interested in two directions. The first is explainab
       Found apology quality significantly predicted trust (F(2,39)&nbsp;=&nbsp;8.38,
       p&nbsp;&lt;&nbsp;.001); rude apologies produced lower trust than no apology at all.
       Identified <em>apology fatigue</em>: higher apology frequency decreased trust independent
-      of tone (&asymp;&nbsp;&minus;0.49&nbsp;units/SD) — with implications for agent personality
-      design in human-machine teaming.
+      of tone (&asymp;&nbsp;&minus;0.49&nbsp;units/SD). Overall, found implications for agent 
+      personality design in human-machine teaming.
     </p>
   </div>
 
@@ -102,9 +116,9 @@ Right now, I'm particularly interested in two directions. The first is explainab
       clustering.
     </p>
     <p>
-      Evaluated via a counterbalanced within-subjects protocol (N&nbsp;=&nbsp;24, Latin square)
-      across three workspace types. Identified Hausdorff distance limitations in topologically
-      complex environments — informing the design of the follow-on multi-agent study.
+      Identified Hausdorff distance, used for k-medoids clustering, has limitations in topologically 
+      complex environments, and the explainability study with human participants was planned but not
+      executed. This work informs the design of a potential follow-on study.
     </p>
   </div>
 
@@ -131,7 +145,7 @@ Led by Prof. Morteza Lahijanian, the ARIA Systems Group develops theoretical fou
 Led by Prof. Katya Arquilla, the Arquilla Group takes a human-centered approach to human-automation interactions and behavioral health in operational environments, using psychophysiological monitoring and wearable sensing.
 
 **Air Force Research Lab — Space Vehicles Directorate**  
-SMART Scholar (2023–present), with three summers of research in explainable ML, control system optimization, and LLM-assisted satellite operations.
+SMART Scholar (2023–present), with four summers of research in explainable ML, control system optimization, and AI-assisted satellite operations.
 
 ---
 
