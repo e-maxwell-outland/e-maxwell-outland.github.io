@@ -80,6 +80,7 @@ Right now, I'm particularly interested in two directions. The first is explainab
       Explored modeling human affective (emotional) state as a continuous latent trajectory 
       estimated from multimodal wearable data, with a latent space grounded in the 
       Russell circumplex.
+    </p>
     <p>
       Set aside this research direction because valence is currently impossible to measure through 
       unobtrusive wearables without self-report data. Real-time brain activity, facial muscle 
