@@ -1,0 +1,34 @@
+---
+layout: default
+title: Melange
+permalink: /melange/
+sitemap: false
+---
+
+<style>
+.mel { max-width: 620px; margin: 0 auto; padding: 3.5rem var(--page-padding) 4rem; }
+.mel-intro { font-family: var(--font-sans); font-size: 1rem; color: var(--color-warm-gray); margin-bottom: 2.5rem; }
+.mel-list { max-width: 620px; margin: 0; }
+.mel-item { padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); }
+.mel-item:last-child { border-bottom: none; }
+.mel-item__link {
+  display: block; font-family: var(--font-serif); font-size: 1.3rem; font-style: italic;
+  color: var(--color-ink); text-decoration: none; margin-bottom: 0.35rem;
+}
+.mel-item__link:hover { color: var(--color-sage); }
+.mel-item__desc { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-warm-gray); }
+</style>
+
+<div class="container page-content">
+  <div class="mel">
+    <h1 class="page-title">Melange</h1>
+    <p class="mel-intro">A miscellany of small, unlisted things I've built for myself.</p>
+
+    <div class="mel-list">
+      <div class="mel-item">
+        <a class="mel-item__link" href="{{ '/tabata/' | relative_url }}">Tabata Timer</a>
+        <div class="mel-item__desc">A no-frills 40s work / 20s rest interval timer.</div>
+      </div>
+    </div>
+  </div>
+</div>

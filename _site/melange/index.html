@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Page Not Found | Emily Maxwell Outland</title>
+  <title>Melange | Emily Maxwell Outland</title>
   <meta name="description" content="Graduate researcher at CU Boulder working on explainable AI, human-machine teaming, and bioastronautics.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,36 +51,34 @@
   </button>
 </nav>
 
-  <main><!-- ====================================================
-     404 Hero
-     ==================================================== -->
-<section class="hero">
-  <div class="hero__text">
-    <span class="eyebrow">404 &middot; Page Not Found</span>
-    <h1 class="hero__name">
-      <span class="name--ink">Oops!</span><br>
-      <em class="name--blossom">You've found the void.</em>
-    </h1>
-    <p class="hero__tagline">
-      The page you're looking for seems to have vanished into the digital ether. 
-      <em class="tagline--blossom">But don't worry, we'll get you back on track.</em>
-    </p>
-    <p class="hero__bio">
-      Maybe it was kidnapped by a mischievous cat, or perhaps it's just taking a nap. 
-      Either way, it's not here right now. Why not head back to the homepage and 
-      explore something else?
-    </p>
-    <div class="hero__buttons">
-      <a href="/" class="btn btn--filled">Return Home</a>
-    </div>
-  </div>
+  <main><style>
+.mel { max-width: 620px; margin: 0 auto; padding: 3.5rem var(--page-padding) 4rem; }
+.mel-intro { font-family: var(--font-sans); font-size: 1rem; color: var(--color-warm-gray); margin-bottom: 2.5rem; }
+.mel-list { max-width: 620px; margin: 0; }
+.mel-item { padding: 1.5rem 0; border-bottom: 1px solid var(--color-border); }
+.mel-item:last-child { border-bottom: none; }
+.mel-item__link {
+  display: block; font-family: var(--font-serif); font-size: 1.3rem; font-style: italic;
+  color: var(--color-ink); text-decoration: none; margin-bottom: 0.35rem;
+}
+.mel-item__link:hover { color: var(--color-sage); }
+.mel-item__desc { font-family: var(--font-sans); font-size: 0.9rem; color: var(--color-warm-gray); }
+</style>
 
-  <div class="hero__photo">
-    <div class="photo-collage">
-      <img src="/assets/images/cats.jpeg" alt="Earl and Matcha" class="photo-collage__main">
+<div class="container page-content">
+  <div class="mel">
+    <h1 class="page-title">Melange</h1>
+    <p class="mel-intro">A miscellany of small, unlisted things I've built for myself.</p>
+
+    <div class="mel-list">
+      <div class="mel-item">
+        <a class="mel-item__link" href="/tabata/">Tabata Timer</a>
+        <div class="mel-item__desc">A no-frills 40s work / 20s rest interval timer.</div>
+      </div>
     </div>
   </div>
-</section></main>
+</div>
+</main>
   <footer class="site-footer">
   <p>
     &copy; 2026 Emily Maxwell Outland

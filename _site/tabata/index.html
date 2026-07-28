@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tabata Timer | Emily Maxwell Outland</title>
+  <meta name="description" content="Graduate researcher at CU Boulder working on explainable AI, human-machine teaming, and bioastronautics.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="/assets/css/main.css">
+  <script>
+    (function() {
+      var stored = localStorage.getItem('theme');
+      var preferred = stored || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+      if (preferred === 'dark') document.documentElement.setAttribute('data-theme', 'dark');
+    })();
+  </script>
+</head>
+<body>
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+  <a class="site-nav__brand" href="/">Emily <span class="site-nav__brand-accent">Maxwell Outland</span></a>
+  <ul class="site-nav__links">
+    <li>
+      <a href="/"
+        >Home</a>
+    </li>
+    <li>
+      <a href="/research/"
+        >Research</a>
+    </li>
+    <li>
+      <a href="/writing/"
+        >Writing</a>
+    </li>
+    <li>
+      <a href="/margins/"
+        >In the Margins</a>
+    </li>
+    <li>
+      <a href="/contact/"
+        >Contact</a>
+    </li>
+  </ul>
+  <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark mode">
+    <svg class="theme-toggle__icon theme-toggle__icon--sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/>
+    </svg>
+    <svg class="theme-toggle__icon theme-toggle__icon--moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9z"/>
+    </svg>
+  </button>
+</nav>
+
+  <main><style>
+.tb { max-width: 420px; margin: 0 auto; padding: 3rem var(--page-padding) 5rem; text-align: center; }
+
+.tb-set {
+  font-family: var(--font-mono); font-size: 1.1rem; text-transform: uppercase;
+  letter-spacing: 0.12em; color: var(--color-warm-gray); margin-top: 1.75rem;
+}
+
+.tb-phase {
+  font-family: var(--font-mono); font-size: 1rem; text-transform: uppercase;
+  letter-spacing: 0.2em; margin-bottom: 0.5rem; transition: color 0.2s ease;
+}
+.tb-phase.work { color: var(--color-sage); }
+.tb-phase.rest { color: var(--color-blossom); }
+
+.tb-time {
+  font-family: var(--font-serif); font-size: 6rem; line-height: 1; color: var(--color-ink);
+  margin-bottom: 1.75rem; font-variant-numeric: tabular-nums;
+}
+
+.tb-track {
+  width: 100%; height: 8px; background: var(--color-border); border-radius: 4px;
+  overflow: hidden; margin-bottom: 2.5rem;
+}
+.tb-fill {
+  height: 100%; border-radius: 4px; transition: background-color 0.2s ease;
+  width: 100%;
+}
+.tb-fill.work { background: var(--color-sage); }
+.tb-fill.rest { background: var(--color-blossom); }
+
+.tb-controls { display: flex; gap: 0.9rem; justify-content: center; }
+.tb-controls .btn { min-width: 120px; justify-content: center; }
+</style>
+
+<div class="tb">
+  <h1 class="page-title" style="text-align:center;font-size:2rem;margin-bottom:1.5rem;">Tabata Timer</h1>
+  <div class="tb-phase work" id="tb-phase">Work</div>
+  <div class="tb-time" id="tb-time">40</div>
+  <div class="tb-track"><div class="tb-fill work" id="tb-fill"></div></div>
+  <div class="tb-controls">
+    <button class="btn btn--filled" id="tb-toggle">Play</button>
+    <button class="btn btn--ghost" id="tb-reset">Reset</button>
+  </div>
+  <div class="tb-set" id="tb-set">Set 1</div>
+</div>
+
+<script>
+(function () {
+'use strict';
+
+var WORK = 40, REST = 20;
+var phase = 'work';
+var remaining = WORK;
+var set = 1;
+var running = false;
+var lastTick = null;
+var timerId = null;
+
+var setEl = document.getElementById('tb-set');
+var phaseEl = document.getElementById('tb-phase');
+var timeEl = document.getElementById('tb-time');
+var fillEl = document.getElementById('tb-fill');
+var toggleBtn = document.getElementById('tb-toggle');
+var resetBtn = document.getElementById('tb-reset');
+
+function duration() { return phase === 'work' ? WORK : REST; }
+
+function render() {
+  setEl.textContent = 'Set ' + set;
+  phaseEl.textContent = phase === 'work' ? 'Work' : 'Rest';
+  phaseEl.className = 'tb-phase ' + phase;
+  timeEl.textContent = Math.ceil(remaining);
+  fillEl.className = 'tb-fill ' + phase;
+  fillEl.style.width = (Math.max(remaining, 0) / duration() * 100) + '%';
+}
+
+function tick() {
+  var now = Date.now();
+  var delta = (now - lastTick) / 1000;
+  lastTick = now;
+  remaining -= delta;
+
+  while (remaining <= 0) {
+    if (phase === 'work') {
+      phase = 'rest';
+      remaining += REST;
+    } else {
+      phase = 'work';
+      set += 1;
+      remaining += WORK;
+    }
+  }
+  render();
+}
+
+function start() {
+  if (running) return;
+  running = true;
+  lastTick = Date.now();
+  timerId = setInterval(tick, 100);
+  toggleBtn.textContent = 'Pause';
+}
+
+function pause() {
+  running = false;
+  clearInterval(timerId);
+  timerId = null;
+  toggleBtn.textContent = 'Play';
+}
+
+function reset() {
+  pause();
+  phase = 'work';
+  remaining = WORK;
+  set = 1;
+  render();
+}
+
+toggleBtn.addEventListener('click', function () {
+  if (running) pause(); else start();
+});
+resetBtn.addEventListener('click', reset);
+
+render();
+})();
+</script>
+</main>
+  <footer class="site-footer">
+  <p>
+    &copy; 2026 Emily Maxwell Outland
+    &mdash;
+    <a href="mailto:emily.maxwelloutland@colorado.edu">emily.maxwelloutland@colorado.edu</a>
+  </p>
+</footer>
+
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', function() {
+      var isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      if (isDark) {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+      }
+    });
+  </script>
+</body>
+</html>

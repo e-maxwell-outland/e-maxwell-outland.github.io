@@ -2,7 +2,7 @@
 layout: margins
 title: In the Margins
 description: What fills in the edges of my time when I'm not adulting or working on research.
-updated: "May 2026"
+updated: "July 2026"
 
 reading: "Hooked, by Asako Yuzuki"
 steeping: "Creme Brulee Green Tea"

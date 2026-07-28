@@ -8,9 +8,9 @@ description: Get in touch with Emily Maxwell Outland.
 
 <div class="contact-grid">
 
-  <a href="mailto:emily.maxwell@colorado.edu" class="contact-card contact-card--sage">
+  <a href="mailto:emily.maxwelloutland@colorado.edu" class="contact-card contact-card--sage">
     <span class="contact-card__label">Email</span>
-    <span class="contact-card__value">emily.maxwell@colorado.edu</span>
+    <span class="contact-card__value">emily.maxwelloutland@colorado.edu</span>
     <span class="contact-card__hint">best for research inquiries</span>
   </a>
 
