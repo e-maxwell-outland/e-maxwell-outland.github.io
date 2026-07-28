@@ -72,7 +72,7 @@ Right now, I'm particularly interested in two directions. The first is explainab
 
 <div class="project-grid">
 
-<div class="project-card">
+  <div class="project-card">
     <div class="project-meta">Master's Thesis &middot; March 2026 – June 2026</div>
     <h3>Longitudinal Affective State Trajectory Modeling</h3>
     <span class="tag tag--blossom" style="margin-bottom:0.75rem;">On Hold</span>
